@@ -1,16 +1,16 @@
 import json
 
 initial=[
-  {"title": "The Alchemist", "author": "Paulo Coelho", "price": 12.99, "in_stock": 'true'},
-  {"title": "1984", "author": "George Orwell", "price": 9.99, "in_stock": 'true'}
+  {"title": "The Alchemist", "author": "Paulo Coelho", "price": 12.99, "in_stock": true},
+  {"title": "1984", "author": "George Orwell", "price": 9.99, "in_stock":true}
 ]
 # Save initial inventory
 with open("inventory.json","w")as file:
-    json.dump(initial,file,indent=2)
+    json.dump(initial,file,indent=4)
     print("Total number of books:",len(initial))
   
 # Define new book   
-new_book = {"title": "Atomic Habits", "author": "James Clear", "price": 14.99, "in_stock": True}
+new_book = {"title": "Atomic Habits", "author": "James Clear", "price": 14.99, "in_stock": true}
 
 # Load, update, and save again
 with open("inventory.json","r")as file:
